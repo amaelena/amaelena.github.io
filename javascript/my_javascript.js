@@ -10,7 +10,7 @@ $(document).ready(function(){
 });
 //typewriter code REMOVE AFTER DEMO
 window.addEventListener('load', printLetter, false);
-var typeString='Designer, researcher, passionate storyteller. Based in Ann Arbor, MI.';
+var typeString='esigner, researcher, passionate storyteller. Based in Ann Arbor, MI.';
 var i=0;
 var speed=50;
 function printLetter(e){
