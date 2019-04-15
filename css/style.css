@@ -246,8 +246,8 @@ a.button {
   font-weight: 400;
 }
 
-.active, .accordion:hover {
-  background-color: #ccc;
+.accordion:active, .accordion:hover {
+  background-color: #C0C0C0;
 }
 
 .panel {
@@ -411,7 +411,7 @@ a.button {
     transition: 0.3s ease;
   }
 
-  .active, .dot:hover {
+  .dot.active, .dot:hover {
     background-color: #717171;
   }
 .gallery {
