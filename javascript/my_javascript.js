@@ -8,43 +8,25 @@ document.querySelector('.navbar_link-toggle').addEventListener('click', classTog
 $(document).ready(function(){
   baguetteBox.run('.gallery');
 });
-//typewriter code REMOVE AFTER DEMO
-window.addEventListener('load', printLetter, false);
-var typeString='esigner, researcher, passionate storyteller. Based in Ann Arbor, MI.';
-var i=0;
-var speed=50;
-function printLetter(e){
-  if (i<typeString.length){
-    if (typeString.charAt(i) !=="B"){
-      document.getElementById('tagline').innerHTML+=typeString.charAt(i);
-      i++;
-    }
-    else {
-      document.getElementById('tagline').innerHTML+= '<br>' + typeString.charAt(i);
-      i++;
-    }
-  }
-  setTimeout(printLetter, speed);
-}
 //ADD IN AFTER DEMO
 //sticky nav code
 //make appear when scrolling up - add event listener
 //disappear when scrolling down
 //display none when scrolling down
-// $(document).ready(function(){
-//   var lastScroll=window.pageYOffset //Y position of element before scroll
-//   window.addEventListener('scroll', stickNav, false);
-//   function stickNav(e) {
-//     var navbar=document.getElementById("topnav");
-//     var currentScroll=window.pageYOffset;
-//     if (lastScroll > currentScroll) {
-//       navbar.style.top="0";
-//     } else {
-//       navbar.style.top="-100px";
-//     }
-//     lastScroll=currentScroll;
-//   }
-// });
+$(document).ready(function(){
+  var lastScroll=window.pageYOffset //Y position of element before scroll
+  window.addEventListener('scroll', stickNav, false);
+  function stickNav(e) {
+    var navbar=document.getElementById("topnav");
+    var currentScroll=window.pageYOffset;
+    if (lastScroll > currentScroll) {
+      navbar.style.top="0";
+    } else {
+      navbar.style.top="-100px";
+    }
+    lastScroll=currentScroll;
+  }
+});
 
 // carousel code
 var index = 1;
