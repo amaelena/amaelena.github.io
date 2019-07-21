@@ -168,12 +168,13 @@ ul {
 }
 
 a.button {
-  -webkit-appearance: button;
+  /* -webkit-appearance: button;
   -moz-appearance: button;
-  appearance: button;
+  appearance: button; */
   text-decoration: none;
   text-align: center;
   color: initial;
+  border: 2px solid #7c6c7a;
   padding: .8em .8em .8em .8em;
   font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
@@ -183,6 +184,11 @@ a.button {
   display: block;
   width:80%;
   margin: 0 auto;
+}
+a.button:hover{
+  background-color: #7c6c7a;
+  transition: 0.3s;
+  color: white;
 }
 .gallery_container{
   display: flex;
@@ -300,16 +306,19 @@ a.button {
     margin-right: auto;
   }
 .project-section {
-  padding-bottom: 3.5rem;
+  padding-bottom: 3rem;
 }
   .project-section img{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
   .project-section p{
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
+  }
+  .project-section ul{
+    padding-bottom: 2rem;
   }
   .project-section h2{
     position: relative;
@@ -459,7 +468,7 @@ header {
     position: relative;
     padding-top: 30px;
   }
-  .sidebyside{
+  .sidebyside_imgleft{
     display: flex;
     flex-direction: row;
     flex-wrap:wrap;
@@ -467,13 +476,32 @@ header {
     align-items: center;
   }
 
-  .sidebyside img{
+  .sidebyside_imgleft img{
     display: flex;
     align-self: flex-start;
     max-height: 100%;
+    padding-bottom: 30px;
   }
 
-  .sidebyside p{
+  .sidebyside_imgleft p{
+    height: 100%;
+  }
+  .sidebyside_imgright{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .sidebyside_imgright img{
+    display: flex;
+    align-self: flex-start;
+    max-height: 100%;
+    padding-bottom: 30px;
+  }
+
+  .sidebyside_imgright p{
     height: 100%;
   }
 }
@@ -686,14 +714,20 @@ footer {
     .about-text{
       margin-left: 2rem;
     }
-  .sidebyside{
+  .sidebyside_imgleft, .sidebyside_imgright{
     flex-wrap: nowrap;
   }
-    .sidebyside img {
+    .sidebyside_imgleft img {
       max-width: 40%;
     }
-    .sidebyside p {
+    .sidebyside_imgright img{
+      max-width: 40%;
+    }
+    .sidebyside_imgleft p {
       margin-left: 2rem;
+    }
+    .sidebyside_imgright p{
+      margin-right: 2rem;
     }
   .index_container{
     flex-wrap: nowrap;
