@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="css/html5reset.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/baguetteBox.min.css">
+      <link rel="stylesheet" href="css/style.css">
+      <title>PROS Internship</title>
+      <link rel="icon" href="imgs/favicon.png">
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138350456-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-138350456-1');
+      </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="javascript/baguetteBox.min.js" async></script>
+    </head>
+    <body>
+      <a href="#main" class="jump">Jump to Content</a>
+      <header>
+        <div class="global-nav" id="topnav">
+          <div class="navbar">
+            <div class="navbar_link navbar_link-brand">
+              <a href="index.html">Amanda Bassett</a>
+            </div>
+            <div class="navbar_link navbar_link-toggle" aria-label="menu icon">
+              <i aria-hidden="true" class="fas fa-bars"></i>
+            </div>
+            <nav class="navbar_items navbar_items--right">
+              <ul class="navbar_link">
+                <li><a href="index.html">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="docs/portfolio_resume.pdf" target="_blank">Resume</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="spacer">
+          &nbsp;
+        </div>
+        <div class="banner">
+          <div class="banner-text">
+            <h1>PROS Internship</h1>
+            <h2>Airline Pricing Software Redesign</h2>
+          </div>
+          <img src="imgs/pros_logo.png" alt="PROS logo" class="banner_logo">
+        </div>
+      </header>
+        <div class="content">
+          <main id="main">
+            <div class="intro">
+              <h2>Overview</h2>
+              <p><strong>Format: </strong>Team project spanning 10-week summer internship</p>
+              <p><strong>Roles: </strong>UX research and design</p>
+              <p><strong>Product: </strong>Pricing software used by the majority of airlines worldwide. PROS travel software uses artificial intelligence to help airlines maximize their revenue from flight ticket sales. My team was specifically working on the Fares workflow, which is the portion of the software used by fare analysts to ensure optimal pricing before posting flight prices to the market.
+              <p><strong>The Challenge: </strong>Conduct research to determine customer pain points within existing workflow. Work with other researchers and designers to brainstorm and prototype solutions that solve for the pain points. Iterate on the design, incorporating feedback from user testing and requirements from Product Management and Development.</p>
+            </div>
+            <div class="project-section">
+              <h2>Task Diagramming</h2>
+              <p>Before diving into the redesign of the workflow, with my team, I created a task diagram to understand how people in different job roles interact with the software. Fare analysts (the primary users) use PROS software to investigate fare pricing changes and ensure that flights are priced appropriately. Administrators use the software less frequently, only entering the system every couple months for approval purposes or editing data in the database.</p><br>
+              <p>Through this task diagramming exercise, it became obvious which screens were the most vital to each role's job functions. My team and I worked together to determine areas where we may be able to simplify the workflow.</p>
+              <img src="imgs/task_diagram.png" alt="task diagram">
+            </div>
+            <div class="project-section">
+              <h2>Identifying Pain Points</h2>
+              <p>Before I arrived at my internship, my teammates conducted the first round of interviews with proxies for our customers (customer success managers who frequently received direct feedback on the product). I listened to all the interviews to pull out key themes and pain points. My team analyzed our collective notes and perceptions of what the most urgent problems were within the system. We determined that the following issues were essential to address within our prototype before testing:</p><br>
+              <ul>
+                <li>The existing workflow requires <strong>significant jumping between screens</strong> for analysts to investigate fares. While analysts are able to view all the information that they need at a glance within a modal, they can't make any adjustments without navigating to several other separate pages.</li>
+                <li><strong>Fare analysts lose context when moving between tabs.</strong> In the existing modal containing four tabs with detailed fare information, the basic fare information is not visible except within the first tab. Losing context is annoying to users and causes the need to repeat steps.</li>
+                <li><strong>The fare details modal is visually cluttered.</strong> While our interviewees indicated that most of the information within the modal was necessary for analysts, there were several columns that repeated across multiple tables, and there were frequently empty tables within the modal since not all tables applied to all fares.</li>
+              </ul>
+            </div>
+            <div class="project-section">
+              <h2>Paper Prototyping</h2>
+              <p>My team worked together to sketch solutions and determine the most efficient pathway during design sessions. Once we had come up with a revised workflow, I created a paper prototype that incorporated these changes. We were able to show this prototype to the product manager and make adjustments before moving into high-fidelity prototyping. Pictured below are a few samples from the paper prototype.</p>
+              <div class="sidebyside">
+                <img src="imgs/fare_details.png" alt="fare details modal">
+                <p>Fare details replaces the bottom half of the screen in the new workflow, giving the user more space to view data. Empty tables do not appear, reducing visual clutter, and a summary at the top helps the analyst to retain context during investigation.</p>
+              </div>
+              <div class="sidebyside">
+                <p>The analyst can view influences applied to the fare to help determine why the fare has triggered an alert.</p>
+                <img src="imgs/influences.png" alt="influences screen sketch">
+              </div>
+              <div class="sidebyside">
+                <img src="imgs/new_influence.png" alt="new influence">
+                <p>Based on the results of fare investigation, the analyst can influence the fare directly from the Influences screen. This removes several steps in comparison to the old workflow.</p>
+              </div>
+            </div>
+            <div class="project-section">
+              <h2>Digital Prototype</h2>
+              <p>I worked with a senior designer on my team to create a digital prototype within Axure. I specifically worked on tweaking the Alerts screen, which is where analysts can go to view and investigate fares whose prices have changed more than a defined threshold.</p>
+              <p><i>This page is continually being updated throughout the course of my internship. Please check back soon for new content!</i></p>
+            </div>
+            <div class="project-section">
+              <h2>Discussion</h2>
+            </div>
+          </main>
+        </div>
+      <footer>
+        <nav class="bottom-nav">
+          <ul>
+            <li><a href="fares.html" class="current">PROS Internship</a></li>
+            <li><a href="careconnect_prototype.html">CareConnect Prototype</a></li>
+            <li><a href="opensap.html">OpenSAP Research</a></li>
+            <li><a href="university_consulting.html">University Consulting</a></li>
+          </ul>
+        </nav><br />
+        <br />
+        <div class="icons">
+          <a href="mailto:amaelena@umich.edu" aria-label="Email to amaelena@umich.edu" class="email-icon">
+            <i aria-hidden="true" class="fa fa-envelope"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/amanda-bassett-62b06887" aria-label="LinkedIn" target="_blank" class="linkedin">
+            <i aria-hidden="true" class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+        <span class="copyright">
+          &copy; Amanda Bassett 2019
+        </span>
+      </footer>
+      <script src="javascript/my_javascript.js"></script>
+    </body>
+  </html>

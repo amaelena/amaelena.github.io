@@ -140,7 +140,7 @@ p {
 blockquote {
   position: relative;
   padding-left: 1em;
-  border-left: 0.2em solid #ffcccc;
+  border-left: 0.2em solid #7c6c7a;
   font-family: 'Open Sans', sans-serif;
   font-style: italic;
   font-size: 18px;
@@ -184,6 +184,18 @@ a.button {
   width:80%;
   margin: 0 auto;
 }
+.gallery_container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.captioned_image {
+  max-width: 100%;
+  /* align-self: center; */
+  padding:1.5em;
+}
+
 
 /*===========================ABOUT PAGE FORMATTING===========================*/
 
@@ -296,6 +308,9 @@ a.button {
     margin-right: auto;
     padding-top: 2rem;
   }
+  .project-section p{
+    padding-bottom: 1rem;
+  }
   .project-section h2{
     position: relative;
     padding-top: 15px;
@@ -308,7 +323,7 @@ a.button {
     width: 50px;
     height: 5px;
     content: "";
-    background: #ffcccc;
+    background: #7c6c7a;
     z-index: -1;
   }
 .slideshow-container {
@@ -444,6 +459,23 @@ header {
     position: relative;
     padding-top: 30px;
   }
+  .sidebyside{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .sidebyside img{
+    display: flex;
+    align-self: flex-start;
+    max-height: 100%;
+  }
+
+  .sidebyside p{
+    height: 100%;
+  }
 }
 
 /*===========================FOOTER===========================*/
@@ -505,7 +537,7 @@ footer {
       text-transform: none;
       border-style: solid;
       border-width: 3px;
-      border-color: #ffcccc;
+      border-color: #7c6c7a;
       margin: 0px 100px 20px 100px;
       }
     a.button {
@@ -654,6 +686,15 @@ footer {
     .about-text{
       margin-left: 2rem;
     }
+  .sidebyside{
+    flex-wrap: nowrap;
+  }
+    .sidebyside img {
+      max-width: 40%;
+    }
+    .sidebyside p {
+      margin-left: 2rem;
+    }
   .index_container{
     flex-wrap: nowrap;
   }
@@ -667,6 +708,9 @@ footer {
     }
   .small_on_desktop {
     max-width: 80%;
+  }
+  .captioned_image {
+    max-width: 43%;
   }
   .container {
     flex-wrap: nowrap;
