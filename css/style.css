@@ -811,9 +811,9 @@ footer {
 }
 @media screen and (min-width:1000px){
   #tagline {
-    max-width: 90%;
-    margin-left: 100px;
-    margin-right: 100px;
+    display: block;
+    max-width: 85%;
+    margin: auto;
   }
 @media screen and (min-width:1680px){
   #tagline {
