@@ -126,11 +126,15 @@ h1 {
 }
 h2 {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.2em;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.21em;
-  padding-bottom: 1rem;
+  padding-bottom: .5em;
+}
+h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 0.10em;
+  color: #707275;
+  padding-bottom: 1.8em;
 }
 p {
   font-family:  'Open Sans', sans-serif;
@@ -156,21 +160,15 @@ blockquote {
   text-decoration: none;
   color: black;
 }
-
 img {
   max-width: 100%;
 }
-
 ul {
   font-family: 'Open Sans', sans-serif;
-  line-height: 1.7;
+  line-height: 1.8;
   margin-left: 1rem;
 }
-
 a.button {
-  /* -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button; */
   text-decoration: none;
   text-align: center;
   color: initial;
@@ -212,7 +210,6 @@ a.button:hover{
   justify-content: space-between;
   align-items: flex-start;
 }
-
   .flex-container img{
     display: flex;
     align-self: flex-start;
@@ -223,7 +220,6 @@ a.button:hover{
     max-height: 100%;
     padding-bottom: 30px;
   }
-
   .about-text{
     height: 100%;
   }
@@ -252,6 +248,10 @@ a.button:hover{
   }
   .index_container h2 {
     padding-bottom: .3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.21em;
+    font-size: 1.2em;
   }
   .index_container p {
     font-family: 'Open Sans', sans-serif;
@@ -305,6 +305,9 @@ a.button:hover{
     margin-left: auto;
     margin-right: auto;
   }
+  .intro a {
+    color: #808080;
+  }
 .project-section {
   padding-bottom: 3rem;
 }
@@ -315,15 +318,19 @@ a.button:hover{
     padding-bottom: 2rem;
   }
   .project-section p{
-    padding-bottom: 2rem;
+    padding-bottom: 1em;
   }
   .project-section ul{
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
   }
-  .project-section h2{
+  .project-section h2, .intro h2{
     position: relative;
     padding-top: 15px;
     z-index:-1;
+    font-size: 1.8em;
+    font-weight: 600;
+    padding-bottom: .5em;
+    letter-spacing: 0.21rem;
   }
   .project-section h2::before {
     position: absolute;
@@ -334,69 +341,6 @@ a.button:hover{
     content: "";
     background: #7c6c7a;
     z-index: -1;
-  }
-.slideshow-container {
-    width: 245px;
-    position: relative;
-    margin-right: auto;
-    margin-left: auto;
-    padding-top: 50px;
-    padding-bottom: 100px;
-  }
-
-  .mySlides {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 245px;
-  }
-
-  /* Next & previous buttons */
-  .previous, .next {
-    cursor: pointer;
-    position: absolute;
-    width: auto;
-    margin-top: 50px;
-    padding: 16px;
-    color: white;
-    background-color: black;
-    font-weight: bold;
-    font-size: 20px;
-    transition: 0.3s ease;
-    user-select: none;
-  }
-
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 0 5px 5px 0;
-  }
-  .previous {
-    border-radius: 5px 0 0 5px;
-  }
-
-  /* On hover, add a black background color */
-  .previous:hover, .next:hover {
-    background-color: rgba(0,0,0,0.5);
-  }
-
-  /* The dots/bullets/indicators */
-.dot-container {
-  text-align: center;
-  padding-top: 20px;
-}
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: 0.3s ease;
-  }
-
-  .dot.active, .dot:hover {
-    background-color: #717171;
   }
 .gallery {
   display: flex;
@@ -416,19 +360,18 @@ a.button:hover{
     opacity: .7;
     transition: 0.3s;
   }
-
 header {
   padding-bottom: 2rem;
 }
-.banner, .banner_careconnect, .banner_iia {
+.banner, .banner_careconnect {
   display: block;
   text-align: center;
   background-color:#f2f2f2;
 }
-.banner_careconnect, .banner_iia {
+.banner_careconnect {
   background-image: none;
 }
-  .careconnect-banner-text, .iia-banner-text {
+  .careconnect-banner-text {
     padding-top: 0.75em;
     padding-bottom: 0.75em;
   }
@@ -438,7 +381,7 @@ header {
     margin-left: 10px;
     margin-right: 10px;
   }
-  .banner h1, .banner_careconnect h1, .banner_iia h1 {
+  .banner h1, .banner_careconnect h1{
     font-size: 26px;
   }
   .banner h2 {
@@ -448,9 +391,6 @@ header {
     display: none;
   }
   .gif {
-    display: none;
-  }
-  .flipcard_back {
     display: none;
   }
   div.middle {
@@ -482,7 +422,6 @@ header {
     max-height: 100%;
     padding-bottom: 30px;
   }
-
   .sidebyside_imgleft p{
     height: 100%;
   }
@@ -493,14 +432,12 @@ header {
     justify-content: space-between;
     align-items: center;
   }
-
   .sidebyside_imgright img{
     display: flex;
     align-self: flex-start;
     max-height: 100%;
     padding-bottom: 30px;
   }
-
   .sidebyside_imgright p{
     height: 100%;
   }
@@ -569,7 +506,7 @@ footer {
       margin: 0px 100px 20px 100px;
       }
     a.button {
-      width: 30%;
+      width: 40%;
     }
     .container {
       justify-content: center;
@@ -588,8 +525,8 @@ footer {
       padding-top: 3px;
     }
     }
-/*===========================DESKTOP===========================*/
-@media screen and (min-width:961px), only print{
+/*===========================DESKTOP AND PRINT===========================*/
+@media screen and (min-width:961px){
   .global-nav{
     position: fixed;
     top: 0;
@@ -603,6 +540,42 @@ footer {
     top: 0;
     transition: top 0.5s;
   }
+  .project-section {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .intro {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .flex-container{
+    flex-wrap: nowrap;
+  }
+    .flex-container img{
+      max-width: 40%;
+    }
+    .about-text{
+      margin-left: 2rem;
+    }
+}
+@media print {
+  .project-section {
+    page-break-inside: avoid;
+    margin: 0;
+    padding: 0;
+  }
+  .body, .content, .intro, #main {
+    margin:0;
+    padding:0;
+  }
+  .global-nav{
+    display:none;
+  }
+  @page{
+    margin-bottom: 2cm;
+  }
+}
+@media screen and (min-width:961px), only print{
    .navbar {
      width: 100%;
      margin: 0 auto;
@@ -658,35 +631,24 @@ footer {
     background-repeat: no-repeat;
     text-align: left;
   }
-  .banner_iia {
-    display: flex;
-    background-image: url(../imgs/breadcrumbs1.png), url(../imgs/breadcrumbs.png);
-    background-color: #f2f2f2;
-    background-size: 200px;
-    height: 450px;
-    background-attachment: fixed;
-    background-position: 90% -180px, 90% 280px;
-    background-repeat: no-repeat;
-    text-align: left;
-  }
     .banner-text {
       margin-left: 100px;
       text-align: left;
       max-width: 50%;
       align-self: center;
     }
-    .careconnect-banner-text, .iia-banner-text{
+    .careconnect-banner-text{
       margin-left: 100px;
       text-align: left;
       max-width: 50%;
       align-self: center;
     }
-    .banner h1, .banner_careconnect h1, .banner_iia h1 {
+    .banner h1, .banner_careconnect h1{
       font-family: 'Lato', sans-serif;
       font-size: 28px;
       text-align: left;
     }
-    .banner h2, .banner_careconnect h2, .banner_iia h2 {
+    .banner h2, .banner_careconnect h2{
       font-family: 'Lato', sans-serif;
       font-size: 18px;
       letter-spacing: 0.18em;
@@ -703,16 +665,6 @@ footer {
       display: flex;
       align-self: center;
       margin: 0 auto;
-    }
-
-  .flex-container{
-    flex-wrap: nowrap;
-  }
-    .flex-container img{
-      max-width: 40%;
-    }
-    .about-text{
-      margin-left: 2rem;
     }
   .sidebyside_imgleft, .sidebyside_imgright{
     flex-wrap: nowrap;
@@ -749,51 +701,6 @@ footer {
   .container {
     flex-wrap: nowrap;
   }
-  .flipcard {
-    background-color: transparent;
-    width: 372px;
-    height: 520px;
-    perspective: 1000px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1rem;
-  }
-  .flipcard_inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  .flipcard_inner:active, .flipcard_inner:focus, .flipcard_inner:hover {
-    transform: rotateY(180deg);
-  }
-    /* Position the front and back side */
-  .flipcard_front, .flipcard_back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-  }
-
-  /* Style the front side (fallback if image is missing) */
-  .flipcard_front {
-    color: black;
-    z-index: 2;
-  }
-
-  /* Style the back side */
-  .flipcard_back {
-    display: block;
-    color: black;
-    transform: rotateY(180deg);
-    z-index: 1;
-  }
-  .flipcard p {
-    padding: 60px;
-  }
   .sketch-text {
     position: relative;
     padding-top: 30px;
@@ -815,6 +722,7 @@ footer {
     max-width: 85%;
     margin: auto;
   }
+}
 @media screen and (min-width:1680px){
   #tagline {
     max-width: 1580px;
