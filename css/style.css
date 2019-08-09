@@ -144,7 +144,7 @@ p {
 blockquote {
   position: relative;
   padding-left: 1em;
-  border-left: 0.2em solid #7c6c7a;
+  border-left: 0.2em solid #00B4A3;
   font-family: 'Open Sans', sans-serif;
   font-style: italic;
   font-size: 18px;
@@ -163,7 +163,7 @@ blockquote {
 img {
   max-width: 100%;
 }
-ul {
+ul, ol {
   font-family: 'Open Sans', sans-serif;
   line-height: 1.8;
   margin-left: 1rem;
@@ -172,7 +172,7 @@ a.button {
   text-decoration: none;
   text-align: center;
   color: initial;
-  border: 2px solid #7c6c7a;
+  border: 2px solid #00B4A3;
   padding: .8em .8em .8em .8em;
   font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
@@ -184,7 +184,7 @@ a.button {
   margin: 0 auto;
 }
 a.button:hover{
-  background-color: #7c6c7a;
+  background-color: #00B4A3;
   transition: 0.3s;
   color: white;
 }
@@ -241,29 +241,11 @@ a.button:hover{
     flex-wrap:wrap;
     justify-content: space-between;
     align-items: flex-start;
-    padding-bottom: 2rem;
-}
-  .index_container img {
     padding-bottom: 1rem;
-  }
-  .index_container h2 {
-    padding-bottom: .3rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 0.21em;
-    font-size: 1.2em;
-  }
-  .index_container p {
-    font-family: 'Open Sans', sans-serif;
-    text-transform: uppercase;
-    font-size: 1.0em;
-    font-weight: 400;
-    letter-spacing: 0.10em;
-    color: #707275;
-  }
+}
   .index_container img:hover{
     opacity:.4;
-    transition: opacity 0.3s;
+    transition: 0.3s;
   }
   .index_item_left{
     object-fit: contain;
@@ -286,24 +268,40 @@ a.button:hover{
   }
   #tagline {
     font-family: 'Javanese Text', serif;
-    font-size: 20px;
-    text-align: center;
+    font-size: 2em;
     line-height: 1.5;
     text-transform: none;
+    color: white;
+    letter-spacing: 0.1em;
+    padding-top: 50px;
+    padding-bottom: 0;
   }
-
+  .dot {
+    height: 10px;
+    width: 10px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  #landing {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #000080;
+    justify-content: space-around;
+    padding: 2rem;
+    align-items: center;
+    }
+  #landing img {
+    max-width: 40%;
+  }
+  }
 /*===========================PROJECT PAGE FORMATTING===========================*/
 
 .intro {
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
 }
   .intro p{
-    padding-bottom: 1rem;
-  }
-  .intro img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    padding-bottom: 1em;
   }
   .intro a {
     color: #808080;
@@ -320,7 +318,7 @@ a.button:hover{
   .project-section p{
     padding-bottom: 1em;
   }
-  .project-section ul{
+  .project-section ul, .project-section ol{
     padding-bottom: 1.5rem;
   }
   .project-section h2, .intro h2{
@@ -332,16 +330,16 @@ a.button:hover{
     padding-bottom: .5em;
     letter-spacing: 0.21rem;
   }
-  .project-section h2::before {
+  /* .project-section h2::before {
     position: absolute;
     left: 0;
     top: 0;
     width: 50px;
     height: 5px;
     content: "";
-    background: #7c6c7a;
+    background: #00B4A3;
     z-index: -1;
-  }
+  } */
 .gallery {
   display: flex;
   flex-direction: row;
@@ -361,12 +359,12 @@ a.button:hover{
     transition: 0.3s;
   }
 header {
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
 }
 .banner, .banner_careconnect {
   display: block;
   text-align: center;
-  background-color:#f2f2f2;
+  background-color:#000080;
 }
 .banner_careconnect {
   background-image: none;
@@ -493,33 +491,11 @@ footer {
   .index_container{
     justify-content: center;
   }
-    #tagline {
-      font-size: 2em;
-      text-align: center;
-      line-height: 1.5;
-      padding-top: 1em;
-      padding-bottom: 1em;
-      text-transform: none;
-      border-style: solid;
-      border-width: 3px;
-      border-color: #7c6c7a;
-      margin: 0px 100px 20px 100px;
-      }
     a.button {
       width: 40%;
     }
     .container {
       justify-content: center;
-    }
-    .slideshow-container {
-      width: 375px;
-    }
-    .mySlides {
-      max-width: 280px;
-    }
-    .previous, .next {
-      top: 50%;
-      margin-top: -22px;
     }
     .navbar_link-toggle{
       padding-top: 3px;
@@ -539,6 +515,12 @@ footer {
   #topnav {
     top: 0;
     transition: top 0.5s;
+  }
+  #landing{
+    flex-wrap: nowrap;
+    }
+  #landing img {
+    max-width: 30%;
   }
   .project-section {
     padding-left: 100px;
