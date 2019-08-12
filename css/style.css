@@ -139,18 +139,6 @@ h3 {
 p {
   font-family:  'Open Sans', sans-serif;
   line-height: 1.8;
-  font-weight: 300;
-}
-blockquote {
-  position: relative;
-  padding-left: 1em;
-  border-left: 0.2em solid #00B4A3;
-  font-family: 'Open Sans', sans-serif;
-  font-style: italic;
-  font-size: 18px;
-  padding-top: 0.8em;
-  padding-bottom: 0.8em;
-  z-index: -1;
 }
 .current{
   font-weight: bold;
@@ -194,12 +182,14 @@ a.button:hover{
   justify-content: space-between;
   align-items: flex-start;
 }
-.captioned_image {
-  max-width: 100%;
-  /* align-self: center; */
-  padding:1.5em;
+figcaption{
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-style: italic;
 }
-
+figure img{
+  margin-bottom: -2rem;
+}
 
 /*===========================ABOUT PAGE FORMATTING===========================*/
 
@@ -287,9 +277,9 @@ a.button:hover{
     display: flex;
     flex-wrap: wrap;
     background-color: #000080;
-    justify-content: space-around;
     padding: 2rem;
     align-items: center;
+    justify-content: center;
     }
   #landing img {
     max-width: 40%;
@@ -303,12 +293,12 @@ a.button:hover{
   .intro p{
     padding-bottom: 1em;
   }
-  .intro a {
-    color: #808080;
-  }
 .project-section {
   padding-bottom: 3rem;
 }
+  p a, figure a{
+    color: #808080;
+  }
   .project-section img{
     display: block;
     margin-left: auto;
@@ -330,16 +320,6 @@ a.button:hover{
     padding-bottom: .5em;
     letter-spacing: 0.21rem;
   }
-  /* .project-section h2::before {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 50px;
-    height: 5px;
-    content: "";
-    background: #00B4A3;
-    z-index: -1;
-  } */
 .gallery {
   display: flex;
   flex-direction: row;
@@ -361,35 +341,30 @@ a.button:hover{
 header {
   padding-bottom: 3rem;
 }
-.banner, .banner_careconnect {
+.banner {
   display: block;
   text-align: center;
-  background-color:#000080;
+  padding: 2rem;
+  height: 250px;
+  overflow: hidden;
 }
-.banner_careconnect {
-  background-image: none;
+#opensap{
+  background-color: #fdf6c5;
 }
-  .careconnect-banner-text {
-    padding-top: 0.75em;
-    padding-bottom: 0.75em;
-  }
-  .banner-text {
-    padding-top: .75rem;
-    padding-bottom: .75rem;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-  .banner h1, .banner_careconnect h1{
+#careconnect{
+  background-color: #ddeeda;
+}
+#pros_color{
+  background-color: #fddfd3;
+}
+  .banner h1{
     font-size: 26px;
   }
-  .banner h2 {
-    line-height: 1.5;
+  .banner h2{
+    padding-bottom: 1rem;
   }
-  .banner_logo {
-    display: none;
-  }
-  .gif {
-    display: none;
+  .banner img{
+    max-width: 250px;
   }
   div.middle {
     text-align: center;
@@ -523,8 +498,9 @@ footer {
     max-width: 30%;
   }
   .project-section {
-    padding-left: 100px;
-    padding-right: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
   }
   .intro {
     padding-left: 100px;
@@ -596,57 +572,22 @@ footer {
     margin: 0px 100px 20px 100px;
   }
   .banner{
-    background-color: #f2f2f2;
     width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    height: 450px;
+    height: 400px;
+    overflow: hidden;
   }
-  .banner_careconnect {
-    display: flex;
-    background-image: url(../imgs/careconnect_screen4.png), url(../imgs/careconnect_screen3.png);
-    background-color: #f2f2f2;
-    background-size: 200px;
-    height: 450px;
-    background-attachment: fixed;
-    background-position: 90% -180px, 90% 280px;
-    background-repeat: no-repeat;
-    text-align: left;
-  }
-    .banner-text {
-      margin-left: 100px;
-      text-align: left;
-      max-width: 50%;
-      align-self: center;
-    }
-    .careconnect-banner-text{
-      margin-left: 100px;
-      text-align: left;
-      max-width: 50%;
-      align-self: center;
-    }
-    .banner h1, .banner_careconnect h1{
+    .banner h1{
       font-family: 'Lato', sans-serif;
       font-size: 28px;
-      text-align: left;
     }
-    .banner h2, .banner_careconnect h2{
+    .banner h2{
       font-family: 'Lato', sans-serif;
       font-size: 18px;
       letter-spacing: 0.18em;
-      line-height: 1.6;
       font-weight: 400;
     }
-    .banner_logo {
-      display: flex;
-      max-width: 300px;
-      margin: 0 auto;
-      align-self: center;
-    }
-    .gif {
-      display: flex;
-      align-self: center;
-      margin: 0 auto;
+    .banner img{
+      max-width: 500px;
     }
   .sidebyside_imgleft, .sidebyside_imgright{
     flex-wrap: nowrap;
@@ -702,13 +643,13 @@ footer {
   #tagline {
     display: block;
     max-width: 85%;
-    margin: auto;
+    /* margin: auto; */
   }
 }
 @media screen and (min-width:1680px){
   #tagline {
     max-width: 1580px;
     text-align: center;
-    margin: auto;
+    /* margin: auto; */
     }
 }
