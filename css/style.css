@@ -263,7 +263,7 @@ figure img{
     line-height: 1.5;
     text-transform: none;
     color: white;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.15em;
     padding-top: 50px;
     padding-bottom: 0;
   }
@@ -358,6 +358,9 @@ header {
 }
 #pros_color{
   background-color: #fddfd3;
+}
+#ascend{
+  background-color: #c3d0ea;
 }
   .banner h1{
     font-size: 26px;
